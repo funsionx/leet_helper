@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@layer base {
+  :root {
+    --color-bg: 48, 44, 66;
+    --color-button_first: 129, 118, 175;
+    --color-button_second: 192, 183, 232;
+  }
+}
