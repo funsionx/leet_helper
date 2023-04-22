@@ -1,0 +1,13 @@
+---
+
+export interface Props {
+  pageLink: any;
+  img: string;
+}
+
+const { img, pageLink, ...rest } = Astro.props as Props;
+---
+
+<a href={pageLink} {...rest} >
+  <img src={img} alt="" />
+</a>
