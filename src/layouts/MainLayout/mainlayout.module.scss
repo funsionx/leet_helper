@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .header {
+    @apply 2xl:mt-[60px] 2xl:mx-[90px] flex justify-between items-center lg:mt-[40px] lg:mx-[60px];
+    &_enter {
+      @apply bg-gradient-to-r from-color_button1 to-color_button2 w-[160px] h-[50px] rounded-[40px] text-dark_blue;
+    }
+    &_navbar {
+      @apply flex justify-center items-center 2xl:gap-[100px] lg:gap-[66px] font-bold text-white text-base;
+    }
+    &_sources {
+      @apply border w-[160px] h-[50px] rounded-[40px];
+    }
+  }
+}

@@ -1,13 +1,19 @@
 ---
-
 export interface Props {
   pageLink: any;
   img: string;
+  width: string;
+  height?: string;
 }
 
-const { img, pageLink, ...rest } = Astro.props as Props;
+const { img, pageLink, width, height } = Astro.props as Props;
 ---
 
-<a href={pageLink} {...rest} >
-  <img src={img} alt="" />
+<a href={pageLink}>
+  <img
+    src={img}
+    alt=""
+    width={`${width}`}
+    height={`${height}`}
+  />
 </a>
