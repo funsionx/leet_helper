@@ -1,0 +1,20 @@
+---
+import IconButton from "./IconButton.astro";
+
+export interface Props {
+  pageLink: any;
+  img: string;
+  title: string;
+  content: string;
+}
+
+const { img, pageLink, title, content } = Astro.props as Props;
+---
+
+<section class="flex items-center justify-center">
+  <IconButton img={`${img}`} pageLink={`${pageLink}`} />
+  <div class="ml-5">
+    <p class="font-bold text-[26px]">{title}</p>
+    <p class="text-[15px]">{content}</p>
+  </div>
+</section>

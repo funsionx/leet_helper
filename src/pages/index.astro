@@ -8,14 +8,15 @@ import mail from "../media/mail.svg";
 import map from "../media/map.svg";
 import "../main.css";
 import SwitchingTitle from "../components/SwitchingTitle";
+import FooterCard from "../components/FooterCard.astro";
 ---
 
 <MainLayout title="algo_helper">
-  <div
-    class="flex px-[160px] 2xl:mt-[130px] lg:mt-[90px] flex-col justify-between items-center mw-full"
+  <main
+    class="flex px-[160px] 2xl:mt-[130px] lg:mt-[90px] flex-col justify-between items-center min-w-[95%]"
   >
-    <div class="flex">
-      <section>
+    <div class="flex mb-5">
+      <section class="mr-[150px]">
         <div class="text-white">
           {(<SwitchingTitle client:visible />)}
           <p class="text-center mb-[67px]">
@@ -24,42 +25,41 @@ import SwitchingTitle from "../components/SwitchingTitle";
         </div>
         <div class="flex justify-center items-center">
           <button
-            class="bg-gradient-to-r from-color_button1 to-color_button2 w-[240px] h-[80px] rounded-[40px] text-xl font-bold"
+            class="bg-gradient-to-r from-color_button1 to-color_button2 w-[240px] h-[80px] rounded-[40px] text-xl font-extrabold"
             >СТАРТ</button
           >
           <IconButton pageLink={"#"} img={svg_arrow} height="80px" />
         </div>
       </section>
-      <img
-        src={homepic_1}
-        alt="pic"
-        class="rounded-[100px] border-[27px] border-soft_black w-[600px] h-[415px]"
-      />
+      <section>
+        <img
+          src={homepic_1}
+          alt="pic"
+          class="rounded-[100px] border-[27px] border-soft_black min-w-[600px] h-[415px]"
+        />
+      </section>
     </div>
     <footer
       class="min-w-full bg-dark_blue rounded-[90px] h-[150px] grid grid-cols-3 items-center text-white"
     >
-      <section class="flex items-center justify-center">
-        <IconButton img={progArr} pageLink={"#"} width="150px" height="35px" />
-        <div class="ml-5">
-          <p class="font-bold text-[26px]">Прогресс</p>
-          <p>Здесь вы можете увидеть на сколько вы приуспели в обучении</p>
-        </div>
-      </section>
-      <section class="flex items-center justify-center">
-        <IconButton img={mail} pageLink={"#"} />
-        <div class="ml-5">
-          <p class="font-bold text-[26px]">Поддержка</p>
-          <p>https://t.me/username</p>
-        </div>
-      </section>
-      <section class="flex items-center">
-        <IconButton img={map} pageLink={"#"} />
-        <div class="ml-5">
-          <p class="font-bold text-[26px]">Роадмап</p>
-          <p>Здесь ты узнаешь в каком порядке тебе изучать блоки с задачми</p>
-        </div>
-      </section>
+      <FooterCard
+        pageLink={"#"}
+        img={progArr}
+        title="Прогресс"
+        content="Здесь вы можете увидеть на сколько вы приуспели в обучении"
+      />
+      <FooterCard
+        pageLink={"#"}
+        img={mail}
+        title="Поддержка"
+        content="https://t.me/username"
+      />
+      <FooterCard
+        pageLink={"#"}
+        img={map}
+        title="Роадмап"
+        content="Здесь ты узнаешь в каком порядке тебе изучать блоки с задачами"
+      />
     </footer>
-  </div>
+  </main>
 </MainLayout>
