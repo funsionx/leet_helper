@@ -1,11 +1,65 @@
 ---
 import IconButton from "../components/IconButton.astro";
 import MainLayout from "../layouts/MainLayout/index.astro";
-import logo from "../media/logo.png";
-import pageLinks from "../components/pageLinks";
+import homepic_1 from "../media/homepic_1.jpg";
+import svg_arrow from "../media/arrow-small-right.svg";
+import progArr from "../media/progressArrow.svg";
+import mail from "../media/mail.svg";
+import map from "../media/map.svg";
 import "../main.css";
+import SwitchingTitle from "../components/SwitchingTitle";
 ---
 
 <MainLayout title="algo_helper">
- <div class=""></div>
+  <div
+    class="flex px-[160px] 2xl:mt-[130px] lg:mt-[90px] flex-col justify-between items-center mw-full"
+  >
+    <div class="flex">
+      <section>
+        <div class="text-white">
+          {(<SwitchingTitle client:visible />)}
+          <p class="text-center mb-[67px]">
+            Твой путеводитель в обучении алгоритмам и подготовке к интервью
+          </p>
+        </div>
+        <div class="flex justify-center items-center">
+          <button
+            class="bg-gradient-to-r from-color_button1 to-color_button2 w-[240px] h-[80px] rounded-[40px] text-xl font-bold"
+            >СТАРТ</button
+          >
+          <IconButton pageLink={"#"} img={svg_arrow} height="80px" />
+        </div>
+      </section>
+      <img
+        src={homepic_1}
+        alt="pic"
+        class="rounded-[100px] border-[27px] border-soft_black w-[600px] h-[415px]"
+      />
+    </div>
+    <footer
+      class="min-w-full bg-dark_blue rounded-[90px] h-[150px] grid grid-cols-3 items-center text-white"
+    >
+      <section class="flex items-center justify-center">
+        <IconButton img={progArr} pageLink={"#"} width="150px" height="35px" />
+        <div class="ml-5">
+          <p class="font-bold text-[26px]">Прогресс</p>
+          <p>Здесь вы можете увидеть на сколько вы приуспели в обучении</p>
+        </div>
+      </section>
+      <section class="flex items-center justify-center">
+        <IconButton img={mail} pageLink={"#"} />
+        <div class="ml-5">
+          <p class="font-bold text-[26px]">Поддержка</p>
+          <p>https://t.me/username</p>
+        </div>
+      </section>
+      <section class="flex items-center">
+        <IconButton img={map} pageLink={"#"} />
+        <div class="ml-5">
+          <p class="font-bold text-[26px]">Роадмап</p>
+          <p>Здесь ты узнаешь в каком порядке тебе изучать блоки с задачми</p>
+        </div>
+      </section>
+    </footer>
+  </div>
 </MainLayout>

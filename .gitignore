@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # prettier && vscdoe
 .prettier
+
+# pnpm
+pnpm-lock.yaml

@@ -8,7 +8,8 @@ module.exports = {
       color_button1: "rgb(var(--color-button_first))",
       color_button2: "rgb(var(--color-button_second))",
       white: "rgb(255, 255, 255)",
-      dark_blue: "rgb(52, 48, 69)"
+      dark_blue: "rgb(52, 48, 69)",
+      soft_black: "rgb(0, 0, 0, 15%)",
     },
     extend: {
       fontFamily: {

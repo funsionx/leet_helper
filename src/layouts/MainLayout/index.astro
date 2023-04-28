@@ -22,10 +22,10 @@ const { title } = Astro.props;
   </head>
   <body class="bg-color_bg">
     <header class={s.header}>
-      <IconButton img={logo} pageLink={/aboutus/} width="200px" />
+      <IconButton img={logo} pageLink={"/"} width="200px" />
       <nav class={s.header_navbar}>
         <a href="#">Задачи</a>
-        <a href="#">О нас</a>
+        <a href="/aboutus/">О нас</a>
         <button class={s.header_sources}>Источники</button>
         <button class={s.header_enter}>ВОЙТИ</button>
       </nav>
